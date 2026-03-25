@@ -1,6 +1,7 @@
 # Customer Churn Prediction ML Pipeline
 
-🚀 Built an end-to-end machine learning pipeline achieving **XX% accuracy** and **XX ROC-AUC** for customer churn prediction.
+🚀 Built an end-to-end machine learning pipeline for customer churn prediction, evaluating multiple models and demonstrating the impact of feature engineering and data quality on model performance.
+
 
 **Author:** Shashank Mysore
 
@@ -28,16 +29,45 @@ This project develops a complete machine learning pipeline to predict customer c
 
 ---
 
-## 📈 Results
+⚠️ Note: Current results highlight the importance of feature engineering and data quality in churn prediction problems.
+
+## 📊 Results
 
 | Model               | Accuracy | ROC-AUC |
 | ------------------- | -------- | ------- |
-| Logistic Regression | XX       | XX      |
-| Random Forest       | XX       | XX      |
-| XGBoost             | XX       | XX      |
-| SVM                 | XX       | XX      |
+| Logistic Regression | 0.53     | 0.55    |
+| Random Forest       | 0.54     | 0.55    |
+| XGBoost             | 0.52     | 0.53    |
+| SVM                 | 0.52     | 0.53    |
 
-**Best Model:** XGBoost
+**Best Model:** Logistic Regression (ROC-AUC: 0.55)
+
+---
+
+## 📈 Performance Summary
+
+* Logistic Regression achieved the highest ROC-AUC score
+* Tree-based models did not significantly outperform linear models
+* Overall model performance indicates limited predictive signal in current features
+
+---
+
+## 🔍 Key Insights
+
+* Current feature set provides **weak separation between churn and non-churn**
+* Model performance suggests need for **better feature engineering or richer data**
+* Demonstrates importance of **data quality over model complexity**
+
+---
+
+## 🧠 Business Insight
+
+While current models show limited predictive power, this highlights a real-world scenario where:
+
+* Data may lack strong signals
+* Additional features (customer behavior, engagement, time-series data) are needed
+* Iterative improvement is essential in production ML systems
+
 
 ---
 
