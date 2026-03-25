@@ -1,49 +1,62 @@
 # Customer Churn Prediction ML Pipeline
 
+🚀 Built an end-to-end machine learning pipeline achieving **XX% accuracy** and **XX ROC-AUC** for customer churn prediction.
+
 **Author:** Shashank Mysore
+
+---
 
 ## 📌 Overview
 
-This project builds an end-to-end machine learning pipeline to predict customer churn in an e-commerce setting. The goal is to identify customers likely to leave and help businesses improve retention.
+This project develops a complete machine learning pipeline to predict customer churn in an e-commerce setting. The goal is to identify customers likely to leave and enable businesses to take proactive retention actions.
 
 ---
 
-## 🚀 Features
+## 📊 Model Performance
 
-* Data preprocessing and feature engineering
-* Exploratory Data Analysis (EDA)
-* Model training (Logistic Regression, Random Forest, XGBoost, SVM)
-* Model evaluation and comparison
-* Config-driven pipeline
+### ROC Curves
+
+![ROC Curves](results/plots/roc_curves.png)
+
+### Confusion Matrices
+
+![Confusion Matrix](results/plots/confusion_matrices.png)
+
+### Model Comparison
+
+![Model Comparison](results/plots/roc_auc_comparison.png)
 
 ---
 
-## 📊 Results
+## 📈 Results
 
 | Model               | Accuracy | ROC-AUC |
 | ------------------- | -------- | ------- |
-| Logistic Regression | 0.82     | 0.89    |
-| Random Forest       | 0.87     | 0.91    |
-| XGBoost             | 0.89     | 0.92    |
-| SVM                 | 0.85     | 0.90    |
+| Logistic Regression | XX       | XX      |
+| Random Forest       | XX       | XX      |
+| XGBoost             | XX       | XX      |
+| SVM                 | XX       | XX      |
 
 **Best Model:** XGBoost
 
-### 🔍 Key Insights
+---
 
-* Customers inactive for 30+ days are more likely to churn
-* Frequent buyers have lower churn rates
-* Recent engagement is the strongest predictor
+## 🔍 Key Insights
+
+* Customers inactive for longer periods are significantly more likely to churn
+* High-value customers tend to have lower churn rates
+* Recent engagement is the strongest predictor of retention
 
 ---
 
 ## 🧠 Business Impact
 
-This model can help:
+This model helps businesses:
 
-* Identify at-risk customers early
+* Identify customers at risk of churn early
 * Improve retention strategies
 * Increase customer lifetime value
+* Reduce revenue loss
 
 ---
 
@@ -52,8 +65,16 @@ This model can help:
 ```bash
 git clone https://github.com/ShashankMMysore/customer-churn-ml
 cd customer-churn-ml
+
+# Create virtual environment
+python3.11 -m venv venv
+source venv/bin/activate
+
+# Install dependencies
 pip install -r requirements.txt
-python scripts/train_and_evaluate.py
+
+# Run pipeline
+PYTHONPATH=. python scripts/train_and_evaluate.py
 ```
 
 ---
@@ -64,8 +85,9 @@ python scripts/train_and_evaluate.py
 customer-churn-ml/
 ├── src/
 ├── data/
-├── notebooks/
+├── scripts/
 ├── configs/
+├── results/
 ├── tests/
 ```
 
@@ -83,15 +105,6 @@ customer-churn-ml/
 
 ## 📈 Future Improvements
 
-* Deploy as API (Flask/FastAPI)
+* Deploy model as API (Flask/FastAPI)
 * Add deep learning model
 * Improve feature engineering
-
-
-## 📊 Model Performance
-
-![ROC Curves](results/plots/roc_curves.png)
-
-![Confusion Matrix](results/plots/confusion_matrices.png)
-
-![Model Comparison](results/plots/roc_auc_comparison.png)
