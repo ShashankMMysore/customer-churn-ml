@@ -1,0 +1,78 @@
+data:
+  raw_path: "data/raw/customer_churn.csv"
+  processed_path: "data/processed/customer_churn_processed.csv"
+  test_size: 0.2
+  random_state: 42
+  stratify: true
+
+features:
+  categorical: 
+    - subscription_plan
+    - payment_method
+    - customer_support_contacted
+    - marketing_emails_opted
+  numerical:
+    - account_age_months
+    - total_purchase_amount
+    - number_of_purchases
+    - average_purchase_value
+    - days_since_last_purchase
+    - customer_support_tickets
+    - product_reviews_count
+    - page_views_per_session
+    - session_frequency_per_month
+    - account_active_days
+
+target: churn
+
+preprocessing:
+  scaling: StandardScaler
+  encoding: one_hot
+  handle_missing: mean
+  outlier_method: iqr
+
+models:
+  logistic_regression:
+    params:
+      max_iter: 1000
+      random_state: 42
+      solver: lbfgs
+    
+  random_forest:
+    params:
+      n_estimators: 100
+      max_depth: 15
+      min_samples_split: 5
+      random_state: 42
+      n_jobs: -1
+    
+  xgboost:
+    params:
+      n_estimators: 100
+      max_depth: 6
+      learning_rate: 0.1
+      subsample: 0.8
+      colsample_bytree: 0.8
+      random_state: 42
+      n_jobs: -1
+    
+  svm:
+    params:
+      kernel: rbf
+      C: 1.0
+      gamma: scale
+      random_state: 42
+
+evaluation:
+  cv_folds: 5
+  metrics:
+    - accuracy
+    - precision
+    - recall
+    - f1
+    - roc_auc
+
+output:
+  model_path: "models/churn_model.pkl"
+  results_path: "results/"
+  plots_path: "results/plots/"
