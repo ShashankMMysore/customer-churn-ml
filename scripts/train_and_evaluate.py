@@ -9,6 +9,7 @@ This script orchestrates the entire ML pipeline:
 5. Save results and visualizations
 """
 
+print("🚀 Script started...")
 import os
 import sys
 import argparse

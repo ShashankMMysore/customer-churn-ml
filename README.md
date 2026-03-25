@@ -86,3 +86,12 @@ customer-churn-ml/
 * Deploy as API (Flask/FastAPI)
 * Add deep learning model
 * Improve feature engineering
+
+
+## 📊 Model Performance
+
+![ROC Curves](results/plots/roc_curves.png)
+
+![Confusion Matrix](results/plots/confusion_matrices.png)
+
+![Model Comparison](results/plots/roc_auc_comparison.png)
